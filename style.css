@@ -1,0 +1,228 @@
+body {
+    background-image: url('background_faded.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+header {
+    position: relative; 
+    top: 0; 
+    z-index: 1000; 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1; /* Take up available space */
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons button {
+    margin-left: 15px;
+    padding: 10px 15px;
+    border: 1px solid rgb(203, 49, 49);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(249, 229, 229);
+    color: rgb(212, 78, 78);
+    font-weight: bold;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.nav-btn {
+    margin-left: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(249, 229, 229); /* Button color */
+    color: rgb(212, 78, 78);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgb(212, 78, 78);
+}
+
+/* Responsive styles */
+@media (min-width: 469px) and (max-width: 768px ) {
+    .nav-container {
+        flex-direction: row; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .nav-buttons {
+        width: 42%; /* Take full width */
+        justify-content: center; /* Center buttons */
+        margin-top: 10px; /* Add space above */
+        top:0;
+    }
+
+    .nav-btn {
+        margin-left: 20px; /* Remove left margin */
+        margin-bottom: 10px; /* Add space between buttons */
+        width: 10%; /* Make buttons full-width */
+        text-align: center;
+        margin-top: 10px;
+        height: 20px;
+        
+    }
+
+    .header-icons {
+        margin-top: 10px; /* Space above icons */
+    }
+}
+
+@media (max-width: 468px) {
+    header {
+        flex-direction: row; /* Stack header elements vertically */
+        align-items: center; /* Center all items */
+    }
+
+    .nav-buttons {
+        flex-direction: column; /* Stack nav buttons */
+        width: 100%; /* Take full width */
+    }
+
+    .nav-btn {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 5px; /* Space between buttons */
+        width: 90%; /* Make buttons slightly less than full width */
+        text-align: center; /* Center text */
+        padding: 10px; /* Increase padding for touch targets */
+    }
+
+    .header-icons {
+        justify-content: center; /* Center header icons */
+        margin-top: 5px; /* Space above icons */
+    }
+
+    .header-icons button {
+        padding: 8px 12px; /* Smaller padding for smaller screens */
+    }
+}
+
+/* Search container and other elements remain the same */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* Full screen height */
+}
+
+form {
+    display: flex;
+    border: 2px solid rgb(212, 78, 78);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: rgb(212, 78, 78);
+}
+
+button {
+    background-color: rgb(212, 78, 78);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 90, 90); /* Slightly lighter red when hovered */
+}
+
+input::placeholder {
+    color: rgba(212, 78, 78, 0.7); /* Placeholder color */
+}
+
+form:focus-within {
+    border-color: rgb(255, 90, 90); /* Change border color on focus */
+}
+
+/* Other existing styles remain the same */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grocgo-logo {
+    width: 310px;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+
+.tagline {
+    font-size: 24px;
+    color: rgb(212, 78, 78);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: rgb(203, 25, 25);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(203, 25, 25);
+    border-radius: 5px;
+}
+
+#close-btn {
+    cursor: pointer;
+    font-size: 24px;
+}

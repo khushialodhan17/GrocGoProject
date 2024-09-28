@@ -1,0 +1,33 @@
+<!-- navbar.html -->
+<nav>
+    <div class="nav-container">
+        <div class="location-selector">
+            <label class="selectLocText" for="location-method">Select Location:</label>
+            <select id="location-method">
+                <option value="">Select Location:</option>
+                <option value="manual">Type Manually</option>
+                <option value="current">Use Current Location</option>
+            </select>
+            <div id="manual-input" style="display: none;">
+                <input type="text" id="manual-location" placeholder="Type location here...">
+            </div>
+            <div id="current-location" style="display: none;">
+                <button id="use-location-btn">Use Current Location</button>
+            </div>
+        </div>
+
+        <div class="header-icons">
+            <button id="login-btn">Login</button>
+            <button id="cart-btn">Cart</button>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="#home" class="nav-btn">
+            <span class="icon">🏠</span> Home
+        </a>
+        <a href="#about-us" class="nav-btn">
+            <span class="icon">ℹ️</span> About Us
+        </a>
+    </div>
+</nav>

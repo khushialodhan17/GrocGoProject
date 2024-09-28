@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrocGO</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="search.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="location-selector">
+                <label class="nav-btn" for="location-method">Select Location:</label>
+                <select id="location-method">
+                    <option value="">Select Location:</option>
+                    <option value="manual">Type Manually</option>
+                    <option value="current">Use Current Location</option>
+                </select>
+            
+                <div id="manual-input" style="display: none;">
+                    <input type="text" id="manual-location" placeholder="Type location here...">
+                </div>
+            
+                <div id="current-location" style="display: none;">
+                    <button id="use-location-btn">Use Current Location</button>
+                </div>
+            </div>
+            
+            <div class="header-icons">
+                <button id="login-btn">Login</button>
+                <button id="cart-btn">Cart</button>
+            </div>
+        </div>
+    
+        <div class="nav-buttons">
+            <a href="#home" class="nav-btn">
+                <span class="icon">🏠</span>
+            </a>
+            <a href="#about-us" class="nav-btn">
+                <span class="icon">ℹ️</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="logo-container">
+        <img src="GrocGoLogo.jpg" alt="GrocGO Logo" class="grocgo-logo"> 
+        <p class="tagline">Your One-stop Solution for Quality Products</p>
+    </div>
+
+    <div class="login-popup" id="login-popup">
+        <div class="popup-content">
+            <h2>Welcome to GrocGO</h2>
+            <p>Your one-stop shop for quality products</p>
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <br>
+            <button class="nav-btn" id="submit-btn">Login</button>
+            <br>
+            <span id="close-btn">&times;</span>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search for products..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJriYT32OpfT0rea9q51huggQLB32wThQ&libraries=places"></script>
+    <script src="script.js"></script>
+</body>
+</html>
